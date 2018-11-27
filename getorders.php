@@ -23,7 +23,7 @@
   echo "</ul>";   //end the bulleted list
   }
   elseif($whichMus == "4"){
-  $query = 'select * from products order by description DESC';
+  $query = 'select * from products order by description ASC';
   $result = mysqli_query($connection, $query); 
   if (!$result) {
     die("databases query on art pieces failed. "); }
