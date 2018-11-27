@@ -18,7 +18,7 @@
     die("databases query on art pieces failed. "); }
   echo "<ul>"; //put the artwork in an unordered bulleted list
   while($row = mysqli_fetch_assoc($result)){
-    echo "<li>" "ProductID: " .$row["productid"]. " Description: " .$row["description"]. "Price: " .$row["cost"]. " Quantity: " .$row["quantity"]. "</li>";
+    echo "<li>" .$row["productid"]. " Description: " .$row["description"]. "Price: " .$row["cost"]. " Quantity: " .$row["quantity"]. "</li>";
   }
   echo "</ul>";   //end the bulleted list
   }
