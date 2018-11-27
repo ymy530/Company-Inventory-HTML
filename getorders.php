@@ -33,7 +33,8 @@
   }
   echo "</ul>";   //end the bulleted list
   }
-  elseif($whichMus == "3"){
+  
+  else($whichMus == "3"){
   $query = 'select * from products order by description DESC';
   $result = mysqli_query($connection, $query); 
   if (!$result) {
