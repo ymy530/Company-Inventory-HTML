@@ -1,4 +1,5 @@
 <?php
+  $whichMus = $_POST["pickamuseum"];
   if($whichMus == "1"){
   $query = 'select * from products order by cost ASC';
   $result = mysqli_query($connection, $query); 
