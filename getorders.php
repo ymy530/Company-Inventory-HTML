@@ -1,7 +1,7 @@
 <?php
   $whichMus = $_POST["pickaorder"];
   if($whichMus == "1"){
-  $query = 'select * from products order by cost ASC';
+  $query = "select * from products order by cost ASC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
     die("databases query on art pieces failed. "); }
@@ -11,8 +11,9 @@
   }
   echo "</ul>";   //end the bulleted list
   }
+  
   else($whichMus == "2"){
-  $query = 'select * from products order by cost DESC';
+  $query = "select * from products order by cost DESC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
     die("databases query on art pieces failed. "); }
