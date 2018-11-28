@@ -78,10 +78,6 @@ Purchase Quantity: <input type="text" name="quantity"><br>
     Customer Phone Number: <input type="number" max="9999999999" name = "customerphone"><br>
     Agent: <select name="customeragent" id = "customeragent"><br>
     <option value="1"> Select Here </option>
-        <!-- customeragent
-What year was it created: <input type="number" min="0" max="2018"  value="2018"><br>
-        Which museum will hold it: <select name="whichmus">
- -->
 <?php
     if (isset($_POST['customeragent'])) { 
       include "connectdb.php"; 
