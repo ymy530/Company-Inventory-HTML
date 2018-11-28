@@ -10,6 +10,7 @@
     echo "<li>" .$row["productid"]. " Description: " .$row["description"]. "Price: " .$row["cost"]. " Quantity: " .$row["quantity"]. "</li>";
   }
   echo "</ul>";   //end the bulleted list
+  mysqli_free_result($result);
   }
   
  //  else($whichMus == "2"){
@@ -46,5 +47,5 @@
 //   }
 //   echo "</ul>";   //end the bulleted list
 //   }
-  mysqli_free_result($result);
+  
   ?>
