@@ -3,16 +3,19 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Dr. Western's Vet Clinic</title>
+<title>Company Inventory</title>
 </head>
 <body>
 <script src = "a3.js"></script>
 <?php
 include 'connectdb.php';
 ?>
-<h1>Welcome to the Western Vet Clinic</h1>
-<h2>Our Customers</h2>
+<h1>Welcome to Inventory</h1>
 
+<!-- -->
+<!-- Check what products that customer purchased -->
+<h2>Our Customers</h2>
+<!-- Get customer list in radio buttom -->
 <form action="getcustomer.php" method="post">
 <?php
    echo "Who are you looking up? </br>";
@@ -21,25 +24,26 @@ include 'connectdb.php';
 <input type="submit" value="Get Customer's Purchased">
 </form>
 
-<h3> DROPDOWN </h3>
+<hr>
+<!-- View all the products information by different orders(price and description) -->
+<h3> View All The Products  </h3>
+<!-- After user click on slidedown bar, the product information show on the same page -->
 <form action="" method="post">
-      <select name="pickaorder" id = "pickaorder">
-     
-      <option value="1"> Select Order </option>
+      <select name="pickaorder" id = "pickaorder">     
+      <option value="1"> Select Here </option>
       <option value="AP"> Ascending Price </option>
       <option value="DP"> Descending Price </option>
       <option value="AD"> Ascending Description </option>
-      <option value="DD"> Descending Description </option>     
-	
-        </select>
+      <option value="DD"> Descending Description </option>     	
+      </select>
 </form>
 <hr>
+<!-- Return the products list with correspond order that user selected -->
  <?php
     if (isset($_POST['pickaorder'])) { 
-      //$whichMus = $_POST['pickaorder'];
       include "connectdb.php"; 
       include "getorders.php";
-    } //end of 
+    } 
 ?>
 
 
@@ -48,23 +52,28 @@ include 'connectdb.php';
 <p>
 <hr>
 <p>
+<!-- Insert new purchase information with existing customer and prosucts, just increase the quantity number -->
 <h4> Insert New Purchase </h4>
 <form action="addnewpurchase.php" method="post">
+<!-- Select products that customer purchased -->
 Products: <br>
-<input type="radio" name="product" value="11">Bike<br>
-<input type="radio" name="product" value="12">Socks<br>
-<input type="radio" name="product" value="66">Elbow pads<br>
-<input type="radio" name="product" value="78">Knee Pads<br>
-<input type="radio" name="product" value="88">Roller Blades<br>
-<input type="radio" name="product" value="98">head pads<br>
-<input type="radio" name="product" value="99">Helmet<br>
+<?php
+   include 'getdescription.php';
+?>
+<!-- Select which customer purcahsed -->
 For which customer: <br>
 <?php
 include 'getdata.php';
 ?>
+<!-- Insert purchase quantity -->
 Purchase Quantity: <input type="text" name="quantity"><br>
 <input type="submit" value="Add New Purchase">
 </form>
+
+<p>
+<hr>
+<p>
+<h5> Insert New Customers </h5>
 
 
 

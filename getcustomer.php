@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Dr. Western's Vet Clinic-Your Pets</title>
+<title>Company Inventory</title>
 </head>
 <body>
 <?php
 include 'connectdb.php';
 ?>
-<h1>Here are your pets:</h1>
+<h1>Here are the products:</h1>
 <ol>
 <?php
    $whichCustomer= $_POST["customer"];
