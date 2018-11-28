@@ -1,6 +1,6 @@
 <?php
   $whichMus = $_POST["pickaorder"];
-  if($whichMus == "2"){
+  if($whichMus == 2){
   $query = "select * from products order by cast(cost as unsigned) ASC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
@@ -13,7 +13,7 @@
   mysqli_free_result($result);
   }
   
-  else($whichMus == "3"){
+  else($whichMus == 3){
   $query = "select * from products order by cast(cost as unsigned) DESC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
