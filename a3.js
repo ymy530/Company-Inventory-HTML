@@ -6,7 +6,7 @@ function prepareListener() {
   var droppy1;
   droppy = document.getElementById("pickaorder");
   droppy1 = document.getElementById("customeragent");
-  droppy.addEventListener("change",getArt); }
+  droppy.addEventListener("change",getArt); 
   droppy1.addEventListener("change",getAgent); }
 function getArt() { 
   alert("hello"); 	
