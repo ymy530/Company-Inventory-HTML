@@ -14,13 +14,14 @@
    //$petName = $_POST["petname"];
    $whichProduct =$_POST["product"];
    $whichQuantity=$_POST["quantity"];
-   $query1= 'SELECT * FROM products INNER JOIN purchased ON products.productid = purchased.productid WHERE description = "' .$whichProduct. '"';
+   $query1= 'SELECT * FROM products INNER JOIN purchased ON products.productid = purchased.productid WHERE description = "' .$whichProduct. '" AND purchased.customerid = "' .$whichCustomer. '"';
    $result=mysqli_query($connection,$query1);
    if (!$result) {
           die("database max query failed.");
    }
    $row=mysqli_fetch_assoc($result);
-   $newkey = intval($row["purchasequantity"]) +  intval($whichQuantity);
+   //if(empty($row)
+   $newkey = intval($row["purchasequantity"]) //+ intval($whichQuantity);
    $newquantity = (string)$newkey;
    //$productiid = $row["purchased.productid"]
    $query = 'UPDATE purchased SET purchasequantity = "' .$newquantity. '" WHERE customerid = "' .$whichCustomer. '"';
