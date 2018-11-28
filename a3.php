@@ -24,7 +24,7 @@ include 'connectdb.php';
       <select name="pickaorder" id = "pickaorder">
      
       <option value="1"> Select Order </option>
-      <option value="2"> Ascending Price </option>
+      <option value="AP"> Ascending Price </option>
       <option value="3"> Descending Price </option>
       <option value="4"> Ascending Description </option>
       <option value="5"> Descending Description </option>     
