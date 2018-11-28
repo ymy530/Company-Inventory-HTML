@@ -43,5 +43,5 @@
   echo "</ul>";   //end the bulleted list
   mysqli_free_result($result);
   } 
-  
+  //
 ?>
