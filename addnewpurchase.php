@@ -13,8 +13,8 @@
    $whichCustomer = $_POST["customer"];
    //$petName = $_POST["petname"];
    $whichProduct =$_POST["product"];
-   $whichQuantity=$_POST["quantity"]
-   $query1= 'SELECT * FROM products INNER JOIN purchased ON products.productid = purchased.productid WHERE description = " .$whichProduct. "';
+   $whichQuantity=$_POST["quantity"];
+   $query1= 'SELECT * FROM products INNER JOIN purchased ON products.productid = purchased.productid WHERE description = "' .$whichProduct. '"';
    $result=mysqli_query($connection,$query1);
    if (!$result) {
           die("database max query failed.");
