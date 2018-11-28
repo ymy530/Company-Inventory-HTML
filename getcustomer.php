@@ -11,7 +11,8 @@ include 'connectdb.php';
 <h1>Here are the products:</h1>
 <ol>
 <?php
-   $whichCustomer= $_POST["customer"];
+   $whichCustomer= $_POST["customer"];//fetch the value that user selected
+   //return the product purchased correspond to value
    $query = 'SELECT  description
 FROM    purchased INNER JOIN  customers ON customers.customerid = purchased.customerid 
 INNER JOIN products ON products.productid = purchased.productid AND customers.customerid="' . $whichCustomer . '"';
@@ -20,7 +21,7 @@ INNER JOIN products ON products.productid = purchased.productid AND customers.cu
          die("database query2 failed.");
      }
     while ($row=mysqli_fetch_assoc($result)) {
-        echo '<li>';
+        echo '<li>';//return the prouct list that purchased
         echo $row["description"];
      }
      mysqli_free_result($result);

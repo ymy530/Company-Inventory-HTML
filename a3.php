@@ -26,7 +26,7 @@ include 'connectdb.php';
 
 <hr>
 <!-- View all the products information by different orders(price and description) -->
-<h3> View All The Products  </h3>
+<h2> View All The Products  </h2>
 <!-- After user click on slidedown bar, the product information show on the same page -->
 <form action="" method="post">
       <select name="pickaorder" id = "pickaorder">     
@@ -46,14 +46,11 @@ include 'connectdb.php';
     } 
 ?>
 
-
-
-
 <p>
 <hr>
 <p>
 <!-- Insert new purchase information with existing customer and prosucts, just increase the quantity number -->
-<h4> Insert New Purchase </h4>
+<h2> Insert New Purchase </h2>
 <form action="addnewpurchase.php" method="post">
 <!-- Select products that customer purchased -->
 Products: <br>
@@ -73,8 +70,30 @@ Purchase Quantity: <input type="text" name="quantity"><br>
 <p>
 <hr>
 <p>
-<h5> Insert New Customers </h5>
+<h2> Add A New Customer </h2>
+<form action="addcustomer.php" method="post" >
+    What is the firstname of the customer: <input type="text"  name="customerfirstname"><br>
+    What is the lastname of the customer: <input type="text" name="customerlastname"><br>
+    Customer City: <input type="text" name="customercity"><br>
+    Customer Phone Number: <input type="number" min="0" max="9999999999" name = "customerphone"><br>
+    Agent: <select name="customeragent" id = "customeragent"><br>
+    <option value="1"> Select Here </option>
+        <!-- customeragent
+What year was it created: <input type="number" min="0" max="2018"  value="2018"><br>
+        Which museum will hold it: <select name="whichmus">
+ -->
+<?php
+    if (isset($_POST['customeragent'])) { 
+      include "connectdb.php"; 
+      include "getagentid.php";
+    } 
+?>
 
+        </select>
+        <br><br>
+  <input type="submit" value="Click here to add New Customer">
+  <hr>
+</form>
 
 
 <?php

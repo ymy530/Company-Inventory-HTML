@@ -8,7 +8,7 @@
 <?php
    include 'connectdb.php';
 ?>
-<h1>Insert purchase<h1>
+<h3>Insert purchase<h3>
 <ol>
 <?php
    $whichCustomer = $_POST["customer"];
