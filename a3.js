@@ -8,6 +8,7 @@ function prepareListener() {
   droppy.addEventListener("change",getArt); }
   droppy1 = document.getElementById("customeragent");
   droppy1.addEventListener("change",getArt); }
-function getArt() {  	
+function getArt() { 
+  alert("hello"); 	
   this.form.submit();
 }
