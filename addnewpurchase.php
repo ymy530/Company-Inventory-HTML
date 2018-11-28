@@ -22,6 +22,7 @@
    $row=mysqli_fetch_assoc($result);
    //if(empty($row)
    $newkey = intval($row["purchasequantity"]); //+ intval($whichQuantity);
+   echo $row["purchasequantity"];
    $newquantity = (string)$newkey;
    //$productiid = $row["purchased.productid"]
    $query = 'UPDATE purchased SET purchasequantity = "' .$newquantity. '" WHERE customerid = "' .$whichCustomer. '"';
