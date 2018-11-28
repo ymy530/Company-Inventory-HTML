@@ -1,47 +1,45 @@
 <?php
   $whichMus = $_POST["pickaorder"];
   if($whichMus == "AP"){
-  $query = "select * from products order by cast(cost as unsigned) ASC";
+  $query = "SELECT * FROM products ORDER BY CAST(cost AS UNSIGNED) ASC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
     die("databases query on art pieces failed. "); }
   echo "<ul>"; //put the artwork in an unordered bulleted list
   while($row = mysqli_fetch_assoc($result)){
-    echo "<li>" .$row["productid"]. " Description: " .$row["description"]. "Price: " .$row["cost"]. " Quantity: " .$row["quantity"]. "</li>";
+    echo "<li>" .$row["productid"]. "   " .$row["description"]. "   " .$row["cost"]. "   " .$row["quantity"]. "</li>";
   }
   echo "</ul>";   //end the bulleted list
   mysqli_free_result($result);
   } elseif($whichMus == "DP"){
-  $query = "select * from products order by cast(cost as unsigned) DESC";
+  $query = "SELECT * FROM products ORDER BY CAST(cost AS UNSIGNED) DESC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
     die("databases query on art pieces failed. "); }
   echo "<ul>"; //put the artwork in an unordered bulleted list
   while($row = mysqli_fetch_assoc($result)){
-    echo "<li>" .$row["productid"]. " Description: " .$row["description"]. "Price: " .$row["cost"]. " Quantity: " .$row["quantity"]. "</li>";
+    echo "<li>" .$row["productid"]. "   " .$row["description"]. "   " .$row["cost"]. "   " .$row["quantity"]. "</li>";
   }
   echo "</ul>";   //end the bulleted list
   mysqli_free_result($result);
   } elseif($whichMus == "AD"){
-  $query = "select * from products order by cast(description as unsigned) ASC";
+  $query = "SELECT * FROM products ORDER BY description ASC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
     die("databases query on art pieces failed. "); }
   echo "<ul>"; //put the artwork in an unordered bulleted list
   while($row = mysqli_fetch_assoc($result)){
-    echo "<li>" .$row["productid"]. "  Description:  " .$row["description"]. "  Price:  " .$row["cost"]. "  Quantity:  " .$row["quantity"]. "</li>";
-  }
+  echo "<li>" .$row["productid"]. "   " .$row["description"]. "   " .$row["cost"]. "   " .$row["quantity"]. "</li>";  }
   echo "</ul>";   //end the bulleted list
   mysqli_free_result($result);
   } else{
-  $query = "select * from products order by cast(description as unsigned) DESC";
+  $query = "SELECT * FROM products ORDER BY description DESC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
     die("databases query on art pieces failed. "); }
   echo "<ul>"; //put the artwork in an unordered bulleted list
   while($row = mysqli_fetch_assoc($result)){
-    echo "<li>" .$row["productid"]. "  Description:  " .$row["description"]. "  Price:  " .$row["cost"]. "  Quantity:  " .$row["quantity"]. "</li>";
-  }
+  echo "<li>" .$row["productid"]. "   " .$row["description"]. "   " .$row["cost"]. "   " .$row["quantity"]. "</li>";  }
   echo "</ul>";   //end the bulleted list
   mysqli_free_result($result);
   } 
