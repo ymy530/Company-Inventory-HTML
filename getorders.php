@@ -27,7 +27,7 @@
   }
   
   elseif($whichMus == "AD"){
-  $query = "select * from products order by description ASC";
+  $query = "select * from products order by cast(description as unsigned) ASC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
     die("databases query on art pieces failed. "); }
@@ -40,7 +40,7 @@
   }
   
   else($whichMus == "DD"){
-  $query = "select * from products order by description DESC";
+  $query = "select * from products order by cast(description as unsigned) DESC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
     die("databases query on art pieces failed. "); }
