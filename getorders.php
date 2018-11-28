@@ -33,7 +33,7 @@
   }
   echo "</ul>";   //end the bulleted list
   mysqli_free_result($result);
-  } else($whichMus == "DD"){
+  } else{
   $query = "select * from products order by cast(description as unsigned) DESC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
