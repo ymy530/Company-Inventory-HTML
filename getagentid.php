@@ -10,7 +10,7 @@
    //create dropdown menu of product types for users
         echo ' <option value="';
         echo $row["agentid"];
-        echo '">' . $row["firstname"] . " " . $row["lastname"] . "<br>";
+        echo '">' . $row["firstname"] . " " . $row["lastname"] . "</option>" "<br>";
    }
    mysqli_free_result($result);
 ?>
