@@ -25,9 +25,9 @@ include 'connectdb.php';
      
       <option value="1"> Select Order </option>
       <option value="AP"> Ascending Price </option>
-      <option value="3"> Descending Price </option>
-      <option value="4"> Ascending Description </option>
-      <option value="5"> Descending Description </option>     
+      <option value="DP"> Descending Price </option>
+      <option value="AD"> Ascending Description </option>
+      <option value="DD"> Descending Description </option>     
 	
         </select>
 </form>
