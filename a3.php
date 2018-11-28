@@ -12,8 +12,10 @@ include 'connectdb.php';
 ?>
 <h1>Welcome to the Western Vet Clinic</h1>
 <h2>Our Customers</h2>
+
 <form action="getcustomer.php" method="post">
 <?php
+   echo "Who are you looking up? </br>";
    include 'getdata.php';
 ?>
 <input type="submit" value="Get Customer's Purchased">
@@ -48,8 +50,7 @@ include 'connectdb.php';
 <p>
 <h4> Insert New Purchase </h4>
 <form action="addnewpurchase.php" method="post">
-New Pet's Name: <input type="text" name="petname"><br>
-New Pet's Species: <br>
+Products: <br>
 <input type="radio" name="product" value="Bike">Bike<br>
 <input type="radio" name="product" value="Socks">Socks<br>
 <input type="radio" name="product" value="Elbow pads">Elbow pads<br>
@@ -61,6 +62,7 @@ For which customer: <br>
 <?php
 include 'getdata.php';
 ?>
+Purchase Quantity: <input type="text" name="quantity"><br>
 <input type="submit" value="Add New Purchase">
 </form>
 

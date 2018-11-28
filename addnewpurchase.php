@@ -2,33 +2,35 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Dr. Western's Vet Clinic-Your Pets</title>
+<title>Insert purchase</title>
 </head>
 <body>
 <?php
    include 'connectdb.php';
 ?>
-<h1>Here are your pets:</h1>
 <ol>
 <?php
    $whichCustomer = $_POST["customer"];
-   $petName = $_POST["petname"];
-   $product =$_POST["product"];
-   $query1= 'select max(petid) as maxid from pet';
+   //$petName = $_POST["petname"];
+   $whichProduct =$_POST["product"];
+   $whichQuantity=$_POST["quantity"]
+   $query1= 'SELECT * FROM products INNER JOIN purchased ON products.productid = purchased.productid WHERE description = "' .$whichProduct. '" AND purchased.customerid = "' .$whichCustomer. '"';
    $result=mysqli_query($connection,$query1);
    if (!$result) {
           die("database max query failed.");
    }
    $row=mysqli_fetch_assoc($result);
-   $newkey = intval($row["maxid"]) + 1;
-   $petid = (string)$newkey;
-   $query = 'INSERT INTO purchased values("' . $petid . '","' . $petName . '","' . $species . '","' . $whichOwner . '")';
+   $newkey = intval($row["purchasequantity"]) +  intval($whichQuantity);
+   $newquantity = (string)$newkey;
+   //$productiid = $row["purchased.productid"]
+   $query = 'UPDATE purchased SET purchasequantity = "' .$newquantity. '" WHERE customerid = "' .$whichCustomer. '"';
    if (!mysqli_query($connection, $query)) {
         die("Error: insert failed" . mysqli_error($connection));
     }
-   echo "Your pet was added!";
+   echo "Your purchase was added!";
    mysqli_close($connection);
 ?>
 </ol>
 </body>
 </html>
+
