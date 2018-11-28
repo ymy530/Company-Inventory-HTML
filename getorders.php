@@ -1,7 +1,7 @@
 <?php
   $whichMus = $_POST["pickaorder"];
   //if($whichMus == "1"){
-  $query = "select * from products order by cost ASC";
+  $query = "select * from products order by cast(cost as unsigned) ASC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
     die("databases query on art pieces failed. "); }
