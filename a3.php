@@ -34,7 +34,7 @@ include 'connectdb.php';
 <hr>
  <?php
     if (isset($_POST['pickaorder'])) { 
-      
+      $whichMus = $_POST['pickaorder'];
       include "connectdb.php"; 
       include "getorders.php";
     } //end of 
