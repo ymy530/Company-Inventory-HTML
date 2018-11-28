@@ -51,13 +51,13 @@ include 'connectdb.php';
 <h4> Insert New Purchase </h4>
 <form action="addnewpurchase.php" method="post">
 Products: <br>
-<input type="radio" name="product" value="Bike">Bike<br>
-<input type="radio" name="product" value="Socks">Socks<br>
-<input type="radio" name="product" value="Elbow pads">Elbow pads<br>
-<input type="radio" name="product" value="Knee Pads">Knee Pads<br>
-<input type="radio" name="product" value="Roller Blades">Roller Blades<br>
-<input type="radio" name="product" value="head pads">head pads<br>
-<input type="radio" name="product" value="Helmet">Helmet<br>
+<input type="radio" name="product" value="11">Bike<br>
+<input type="radio" name="product" value="12">Socks<br>
+<input type="radio" name="product" value="66">Elbow pads<br>
+<input type="radio" name="product" value="78">Knee Pads<br>
+<input type="radio" name="product" value="88">Roller Blades<br>
+<input type="radio" name="product" value="98">head pads<br>
+<input type="radio" name="product" value="99">Helmet<br>
 For which customer: <br>
 <?php
 include 'getdata.php';

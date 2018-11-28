@@ -14,23 +14,35 @@
    //$petName = $_POST["petname"];
    $whichProduct =$_POST["product"];
    $whichQuantity=$_POST["quantity"];
-   $query1= 'SELECT * FROM products INNER JOIN purchased ON products.productid = purchased.productid WHERE description = "' .$whichProduct. '" AND purchased.customerid = "' .$whichCustomer. '"';
+   $query1= 'SELECT * FROM products INNER JOIN purchased ON products.productid = purchased.productid WHERE purchased.productid = "' .$whichProduct. '" AND purchased.customerid = "' .$whichCustomer. '"';
    $result=mysqli_query($connection,$query1);
    if (!$result) {
           die("database max query failed.");
    }
    $row=mysqli_fetch_assoc($result);
-   //if(empty($row)
-   $newkey = intval($row["purchasequantity"])+ intval($whichQuantity);
+   if(empty($row)){
+   $newkey = intval($whichQuantity);
    //echo $row["purchasequantity"];
    $newquantity = (string)$newkey;
-   //$productiid = $row["purchased.productid"]
-   $query = 'UPDATE purchased SET purchasequantity = "' .$newquantity. '" WHERE customerid = "' .$whichCustomer. '"';
+   //$productiid = $row["purchased.productid"];
+   $query = 'INSERT INTO purchased VALUES("' .$whichCustomer. '", "' .$newquantity. '", "' .$whichProduct. '")';
    if (!mysqli_query($connection, $query)) {
         die("Error: insert failed" . mysqli_error($connection));
     }
    echo "Your purchase was added!";
-   mysqli_close($connection);
+   mysqli_close($connection);   
+   } else{
+   $newkey = intval($row["purchasequantity"])+ intval($whichQuantity);
+   //echo $row["purchasequantity"];
+   $newquantity = (string)$newkey;
+   //$productiid = $row["purchased.productid"];
+   $query = 'UPDATE purchased SET purchasequantity = "' .$newquantity. '" WHERE customerid = "' .$whichCustomer. '" AND productid = "' .$whichProduct. '"';
+   if (!mysqli_query($connection, $query)) {
+        die("Error: insert failed" . mysqli_error($connection));
+    }
+   echo "Your purchase was added!";
+   mysqli_close($connection);   
+   }
 ?>
 </ol>
 </body>
