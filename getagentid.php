@@ -1,7 +1,7 @@
 <?php
-	$whichAgent = $_POST["customeragent"];
+	//$whichAgent = $_POST["customeragent"];
 // Get the customer table order by last name
-   $query = 'SELECT  * FROM agents WHERE agentid="' . $whichAgent . '"';
+   $query = 'SELECT  * FROM agents';
    // run the query
    $result = mysqli_query($connection,$query);
    if (!$result) {
