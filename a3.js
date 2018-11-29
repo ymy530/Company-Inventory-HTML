@@ -8,6 +8,5 @@ function prepareListener() {
   document.getElementById("customeragent").addEventListener("change",getArt);
   }
 function getArt() { 
-  alert("hello"); 	
   this.form.submit();
 }
