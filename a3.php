@@ -80,7 +80,6 @@ Purchase Quantity: <input type="text" name="quantity"><br>
     <option value="1"> Select Here </option>
 <?php
       include "getagentid.php";
-    } 
 ?>
 
         </select>
