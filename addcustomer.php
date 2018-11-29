@@ -4,7 +4,7 @@
    $customerLastname = $_POST["customerlastname"];
    $customerCity = $_POST["customercity"];
    $customerPhone = $_POST["customerphone"];
-   $customerAgent = $_POST["customeragent"]
+   $customerAgent = $_POST["customeragent"];
    $query1= 'SELECT MAX(customerid) AS cusid FROM customers';
    $result=mysqli_query($connection,$query1);
    if (!$result) {
