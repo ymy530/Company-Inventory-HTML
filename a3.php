@@ -79,13 +79,14 @@ Purchase Quantity: <input type="text" name="quantity"><br>
     Agent: <select name="customeragent" id = "customeragent"><br>
     <option value="1"> Select Here </option>
 <?php
-      include "connectdb.php";
+    if (isset($_POST['customeragent'])) { 
+      include "connectdb.php"; 
       include "getagentid.php";
+    } 
 ?>
 
         </select>
-        <br>
-        <br>
+        <br><br>
   <input type="submit" value="Click here to add New Customer">
   <hr>
 </form>
