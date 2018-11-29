@@ -16,7 +16,6 @@
 $query= 'INSERT INTO customers VALUES("' .$cusid.'","' .$customerFirstname. '","' .$customerLastname. '","' .$customerCity. '","' .$customerPhone. '","' .$customerAgent. '")';
 if (!mysqli_query($connection,$query)) {
 die ("Error while trying to add new customer". mysqli_error($connection));
-} else {
-header('Location: a3.php'); //send back to museum page once it is done exit;
 } 
+
 ?>
