@@ -3,7 +3,7 @@ window.onload = function() {
 }
 function prepareListener() {
   //var droppy;
-  var droppy1;
+  //var droppy1;
   //document.getElementById("pickaorder").addEventListener("change",getArt);
   document.getElementById("customeragent").addEventListener("change",getArt);
   }
