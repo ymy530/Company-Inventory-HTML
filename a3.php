@@ -76,7 +76,7 @@ Purchase Quantity: <input type="text" name="quantity"><br>
     What is the lastname of the customer: <input type="text" name="customerlastname"><br>
     Customer City: <input type="text" name="customercity"><br>
     Customer Phone Number: <input type="number" max="9999999999" name = "customerphone"><br>
-    Agent: <select name="customeragent" id = "customeragent"><br>
+    Agent: <select name="customeragent"><br>
     <option value="1"> Select Here </option>
 <?php
       include "getagentid.php";
