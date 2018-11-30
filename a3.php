@@ -96,10 +96,12 @@ Purchase Quantity: <input type="text" name="quantity"><br>
 <form action="updatephone.php" method="post">
 For which customer: <br>
 <select name="customername"><br>
+<option value="1"> Select Here </option>
 <?php
       include "selectcustomer.php";
 ?>
       </select>
+      <br>
       Enter New Phone Number: <input type="number" max="9999999999" name = "newphone"><br>
        <br><br>
   <input type="submit" value="Click here to update phone number">
