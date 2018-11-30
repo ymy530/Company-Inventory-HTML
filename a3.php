@@ -89,6 +89,23 @@ Purchase Quantity: <input type="text" name="quantity"><br>
 </form>
 
 
+<p>
+<hr>
+<p>
+<h2> Update Phone Number </h2>
+<form action="updatephone.php" method="post">
+For which customer: <br>
+<select name="customername"><br>
+<?php
+      include "selectcustomer.php";
+?>
+      </select>
+      Enter New Phone Number: <input type="number" max="9999999999" name = "newphone"><br>
+       <br><br>
+  <input type="submit" value="Click here to update phone number">
+  <hr>
+</form>
+
 <?php
 mysqli_close($connection);
 ?> 
