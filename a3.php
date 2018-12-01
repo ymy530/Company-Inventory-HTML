@@ -156,7 +156,7 @@ Quantity Check: <input type="text" name="quantitycheck"><br>
 <form action="totalsales.php" method="post">
 <!-- Select products that customer purchased -->
 For which product: <br>
-<select name="totalsales"><br>
+<select name="totalsalesproduct"><br>
 <option value="1"> Select Here </option>
 <?php
    include 'getproduct.php';

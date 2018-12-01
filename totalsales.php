@@ -1,11 +1,16 @@
 <?php
    include 'connectdb.php';
-   $whichProduct = $_POST["totalsales"];
-   //$customerPhone = $_POST["newphone"];
-	$query = 'DELETE FROM customers WHERE productid = "' .$whichProduct. '"';
-if (!mysqli_query($connection,$query)) {
-die ("Error while trying to delete customer ". mysqli_error($connection));
-} else {
-header('Location: a3.php'); //send back to museum page once it is done exit;
+   $whichproduct= $_POST["totalsalesproduct"];//fetch the value that user selected
+   //return the product purchased correspond to value
+   $query = 'SELECT description, sum(purchasequantity) AS totalsale, (cost*purchasequantity) AS money FROM products, purchased WHERE products.productid = purchased.productid AND purchased.productid = "' .$whichproduct. '"';
+   $result=mysqli_query($connection,$query);
+    if (!$result) {
+         die("database query2 failed.");
+     }
+    while ($row=mysqli_fetch_assoc($result)) {
+        echo '<li>';//return the prouct list that purchased
+        echo $row["description"];
+        echo $row["totalsale"];
+        echo $row["money"];
 } 
 ?>
