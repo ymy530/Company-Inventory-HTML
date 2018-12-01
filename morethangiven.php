@@ -11,7 +11,7 @@ INNER JOIN products ON products.productid = purchased.productid WHERE purchasequ
          die("database query2 failed.");
      }
     while ($row=mysqli_fetch_assoc($result)) {
-        //echo '<li>';//return the prouct list that purchased
+        echo '<li>';//return the prouct list that purchased
        echo $row["firstname"];
   		echo $row["lastname"];
   		echo $row["purchasequantity"];
