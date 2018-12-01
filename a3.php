@@ -108,6 +108,74 @@ For which customer: <br>
   <hr>
 </form>
 
+<p>
+<hr>
+<p>
+<h2> Delete Customer </h2>
+<form action="deletecustomer.php" method="post">
+For which customer: <br>
+<select name="customerdelete"><br>
+<option value="1"> Select Here </option>
+<?php
+      include "selectcustomer.php";
+?>
+      </select>
+       <br><br>
+  <input type="submit" value="Click here to delete customer">
+  <hr>
+</form>
+
+<p>
+<hr>
+<p>
+<h2> Customer bought more than given quantity </h2>
+<form action="morethangiven.php" method="post">
+<!-- 
+<select name="overpurchased"><br>
+<option value="1"> Select Here </option>
+<?php
+      include "overpurchasedcustomer.php";
+?>
+      </select>
+ -->
+
+Quantity Check: <input type="text" name="quantitycheck"><br>
+       <br><br>
+  <input type="submit" value="Click here to check quantity">
+  <hr>
+</form>
+
+<p>
+<hr>
+<p>
+<h2> Never Purchased </h2>
+<form action="neverpurchased.php" method="post">
+For which product: <br>
+<select name="neverpurchased"><br>
+<option value="1"> Select Here </option>
+<?php
+      include "selectcustomer.php";
+?>
+      </select>
+       <br><br>
+  <input type="submit" value="Click here to delete customer">
+  <hr>
+</form>
+
+<!-- Insert new purchase information with existing customer and prosucts, just increase the quantity number -->
+<h2> Total sales </h2>
+<form action="totalsales.php" method="post">
+<!-- Select products that customer purchased -->
+For which product: <br>
+<select name="totalsales"><br>
+<option value="1"> Select Here </option>
+<?php
+   include 'getproduct.php';
+?>
+
+<input type="submit" value="Click here to get total sales">
+</form>
+
 <?php
 mysqli_close($connection);
 ?> 
