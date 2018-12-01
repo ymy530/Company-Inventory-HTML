@@ -5,7 +5,7 @@
    //return the product purchased correspond to value
    $query = 'SELECT  *
 FROM purchased INNER JOIN  customers ON customers.customerid = purchased.customerid 
-INNER JOIN products ON products.productid = purchased.productid WHERE purchasequantity > "' . $whichQuantity . '"';
+INNER JOIN products ON products.productid = purchased.productid WHERE purchasequantity > "' .$whichQuantity. '"';
    $result=mysqli_query($connection,$query);
     if (!$result) {
          die("database query2 failed.");
