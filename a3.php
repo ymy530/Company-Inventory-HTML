@@ -141,18 +141,15 @@ Quantity Check: <input type="text" name="quantitycheck"><br>
 <hr>
 <p>
 <h2> Never Purchased </h2>
-<form action="neverpurchased.php" method="post">
-For which product: <br>
-<select name="neverpurchased"><br>
-<option value="1"> Select Here </option>
+
 <?php
-      include "selectcustomer.php";
+      include "neverpurchased.php";
 ?>
-      </select>
+
        <br><br>
-  <input type="submit" value="Click here to delete customer">
+
   <hr>
-</form>
+
 
 <!-- Insert new purchase information with existing customer and prosucts, just increase the quantity number -->
 <h2> Total sales </h2>
