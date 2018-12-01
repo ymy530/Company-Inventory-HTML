@@ -4,8 +4,8 @@
    $whichQuantity= $_POST["quantitycheck"];//fetch the value that user selected
    //return the product purchased correspond to value
    $query = 'SELECT  *
-FROM purchased INNER JOIN  customers ON customers.customerid = purchased.customerid 
-INNER JOIN products ON products.productid = purchased.productid WHERE purchasequantity > "' .$whichQuantity. '"';
+FROM customers, products, purchased WHERE
+        customers.customerid = purchased.customerid AND products.productid = purchased.productid AND  purchasequantity > "' .$whichQuantity. '"';
    $result=mysqli_query($connection,$query);
     if (!$result) {
          die("database query2 failed.");
