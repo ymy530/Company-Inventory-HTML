@@ -139,7 +139,7 @@ For which customer: <br>
       </select>
  -->
 
-Quantity Check: <input type="text" name="quantitycheck"><br>
+Quantity Check: <input type="number" name="quantitycheck"><br>
        <br><br>
   <input type="submit" value="Click here to check quantity">
   <hr>
