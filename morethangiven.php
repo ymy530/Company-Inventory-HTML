@@ -3,7 +3,7 @@
    $whichQuantity= $_POST["quantitycheck"];//fetch the value that user selected
    $query = 'SELECT  *
 FROM purchased INNER JOIN  customers ON customers.customerid = purchased.customerid 
-INNER JOIN products ON products.productid = purchased.productid WHERE purchasequantity> $whichQuantity';
+INNER JOIN products ON products.productid = purchased.productid WHERE purchasequantity > "' .$whichQuantity. '"';
    $result=mysqli_query($connection,$query);
     if (!$result) {
          die("database query2 failed.");
@@ -13,6 +13,7 @@ INNER JOIN products ON products.productid = purchased.productid WHERE purchasequ
        echo $row["firstname"];
   		echo $row["lastname"];
   		echo $row["purchasequantity"];
+  		echo  $whichQuantity;
      }
      mysqli_free_result($result);
 ?>
