@@ -130,16 +130,8 @@ For which customer: <br>
 <p>
 <h2> Customer bought more than given quantity </h2>
 <form action="morethangiven.php" method="post">
-<!-- 
-<select name="overpurchased"><br>
-<option value="1"> Select Here </option>
-<?php
-      include "overpurchasedcustomer.php";
-?>
-      </select>
- -->
 
-Quantity Check: <input type="number" name="quantitycheck"><br>
+Quantity Check: <input type="text" name="quantitycheck"><br>
        <br><br>
   <input type="submit" value="Click here to check quantity">
   <hr>
