@@ -1,6 +1,6 @@
 <?php
    //$whichCustomer= $_POST["overpurchased"];//fetch the value that user selected
-   $whichQuantity= = $_POST["quantitycheck"];//fetch the value that user selected
+   $whichQuantity= $_POST["quantitycheck"];//fetch the value that user selected
    //return the product purchased correspond to value
    $query = 'SELECT  *
 FROM    purchased INNER JOIN  customers ON customers.customerid = purchased.customerid 
