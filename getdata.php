@@ -7,10 +7,10 @@
         die("databases query failed.");
     }  
    while ($row = mysqli_fetch_assoc($result)) {
-   //create radio buttom of product types for users
+   //create radio buttom of customers for user
         echo '<input type="radio" name="customer" value="';
         echo $row["customerid"];
-        echo '">' . $row["firstname"] . " " . $row["lastname"] . "<br>";
+        echo '">' . $row["customerid"]. " " .$row["firstname"] . " " . $row["lastname"] . "<br>";
    }
    mysqli_free_result($result);
 ?>

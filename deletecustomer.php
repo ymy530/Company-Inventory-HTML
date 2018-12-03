@@ -1,7 +1,8 @@
 <?php
    include 'connectdb.php';
+   // fetch the customer id correspond the customer that user chose
    $customerName = $_POST["customerdelete"];
-   //$customerPhone = $_POST["newphone"];
+   // perform deletion of customer
 	$query = 'DELETE FROM customers WHERE customerid = "' .$customerName. '"';
 if (!mysqli_query($connection,$query)) {
 die ("Error while trying to delete customer ". mysqli_error($connection));
