@@ -2,7 +2,7 @@
 	include 'connectdb.php';
    $whichQuantity= $_POST["quantitycheck"];//fetch the value that user selected
    $query = 'SELECT customers.lastname as lastname, customers.firstname as firstname,purchasequantity, description FROM customers, products, purchased WHERE
-        customers.customerid = purchase.customerid AND products.productid = purchase.productid AND purchasequantity> "' .$whichQuantity. '"';
+        customers.customerid = purchased.customerid AND products.productid = purchased.productid AND purchasequantity> "' .$whichQuantity. '"';
    $result=mysqli_query($connection,$query);
     if (!$result) {
          die("database query2 failed.");
