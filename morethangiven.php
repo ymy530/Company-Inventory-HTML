@@ -1,9 +1,8 @@
 <?php
 	include 'connectdb.php';
    $whichQuantity= $_POST["quantitycheck"];//fetch the value that user selected
-   $query = 'SELECT  *
-FROM purchased INNER JOIN customers ON customers.customerid = purchased.customerid 
-INNER JOIN products ON products.productid = purchased.productid AND purchasequantity>"' .$whichQuantity. '"';
+   $query = 'SELECT customers.lastname as lastname, customers.firstname as firstname,purchasequantity, description FROM customers, products, purchase WHERE
+        customers.customerid = purchase.customerid AND products.productid = purchase.productid AND purchasequantity> "' .$whichQuantity. '"';
    $result=mysqli_query($connection,$query);
     if (!$result) {
          die("database query2 failed.");
