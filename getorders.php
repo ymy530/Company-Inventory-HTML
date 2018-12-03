@@ -38,10 +38,10 @@
   echo "<ul>"; 
   while($row = mysqli_fetch_assoc($result)){
    //print the products table row by row
-  echo "<li>" .$row["productid"]. "  &nbsp Product:  " .$row["description"]. "  &nbsp Cost:  " .$row["cost"]. "  &nbsp Quantity:     " .$row["quantity"]. "</li>";
+  echo "<li>" .$row["productid"]. "  &nbsp Product:  " .$row["description"]. "  &nbsp Cost:  " .$row["cost"]. "  &nbsp Quantity:     " .$row["quantity"]. "</li>";}
   echo "</ul>";  
   mysqli_free_result($result);
-  } else {
+  } else{
   $query = "SELECT * FROM products ORDER BY description DESC";
   $result = mysqli_query($connection, $query); 
   if (!$result) {
@@ -49,7 +49,7 @@
   echo "<ul>"; 
   while($row = mysqli_fetch_assoc($result)){
    //print the products table row by row
-  echo "<li>" .$row["productid"]. "  &nbsp Product:  " .$row["description"]. "  &nbsp Cost:  " .$row["cost"]. "  &nbsp Quantity:     " .$row["quantity"]. "</li>";
+  echo "<li>" .$row["productid"]. "  &nbsp Product:  " .$row["description"]. "  &nbsp Cost:  " .$row["cost"]. "  &nbsp Quantity:     " .$row["quantity"]. "</li>";}
   echo "</ul>";   
   mysqli_free_result($result);
   } 
