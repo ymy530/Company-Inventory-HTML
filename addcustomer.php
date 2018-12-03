@@ -13,7 +13,7 @@
    $row=mysqli_fetch_assoc($result);
    $newkey = intval($row["cusid"]) + 1;
    $cusid = (string)$newkey;
-$query= 'INSERT INTO customers VALUES("' .$cusid.'","' .$customerFirstname. '","' .$customerLastname. '","' .$customerCity. '","' .$customerPhone. '","' .$customerAgent. '")';
+   $query= 'INSERT INTO customers VALUES("' .$cusid.'","' .$customerFirstname. '","' .$customerLastname. '","' .$customerCity. '","' .$customerPhone. '","' .$customerAgent. '")';
 if (!mysqli_query($connection,$query)) {
 die ("Error while trying to add new customer". mysqli_error($connection));
 } else {

@@ -8,13 +8,15 @@
         customers.customerid = purchased.customerid AND products.productid = purchased.productid AND purchasequantity> "' .$checkquantity. '"';
    $result=mysqli_query($connection,$query);
     if (!$result) {
-         die("database query2 failed.");
+         die("database query failed.");
      }
     while ($row=mysqli_fetch_assoc($result)) {
-        echo '<li>';//return the purchased list that customer name, and their purchase quantity
+        echo '<li>';//return the purchased list that customer name, product description and their purchase quantity
         echo $row["firstname"];
         echo " ";
   		echo $row["lastname"];
+  		echo " ";
+  		echo $row["description"];
   		echo " ";
   		echo $row["purchasequantity"];
   		echo '</li>';

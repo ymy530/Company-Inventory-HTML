@@ -21,7 +21,7 @@ include 'connectdb.php';
 <form action="getcustomer.php" method="post">
 <?php
    echo "Who are you looking up? </br>";
-   include 'getdata.php';
+   include 'allcustomerinfo.php';
 ?>
 <input type="submit" value="Get Customer's Purchased">
 </form>
@@ -47,7 +47,7 @@ include 'connectdb.php';
       include "connectdb.php"; 
       include "getorders.php";
     } 
-?>
+ ?>
 <p>
 <hr>
 <p>
@@ -66,7 +66,7 @@ include 'connectdb.php';
 include 'getdata.php';
 ?>
 <!-- Insert purchase quantity -->
-Purchase Quantity: <input type="text" name="quantity"><br>
+Purchase Quantity: <input type="number" min="0" name="quantity"><br>
 				   <input type="submit" value="Add New Purchase">
 </form>
 
@@ -86,11 +86,11 @@ Purchase Quantity: <input type="text" name="quantity"><br>
 <!-- Select agent who work for new customer -->
 <h3>Agent:</h3> <select name="customeragent"><br>
 				<option value="1"> Select Here </option>
-<?php
-      include "getagentid.php";
-?>
+		<?php
+     	 include "getagentid.php";
+		?>
 
-        </select>
+        		</select>
         <br><br>
   <input type="submit" value="Click here to add New Customer">
   <hr>
@@ -104,16 +104,18 @@ Purchase Quantity: <input type="text" name="quantity"><br>
 <form action="updatephone.php" method="post">
 <!-- Promp to choose customer that need to update phone number -->
 <h3>For which customer:</h3> <br>
-<select name="customername"><br>
-<option value="1"> Select Here </option>
+	<select name="customername"><br>
+	<option value="1"> Select Here </option>
 <?php
       include "selectcustomer.php";
 ?>
-</select>
-<br>
+	</select>
+	<br>
+	
 <!-- Enter the new phone number -->
-<h3>Enter New Phone Number:</h3> <input type="number" max="9999999999" name = "newphone"><br><br><br>   
-  <input type="submit" value="Click here to update phone number">
+<h3>Enter New Phone Number:</h3> 
+	<input type="number" max="9999999999" name = "newphone"><br><br><br>   
+	<input type="submit" value="Click here to update phone number">
   <hr>
 </form>
 
@@ -140,8 +142,9 @@ Purchase Quantity: <input type="text" name="quantity"><br>
 <h2> Customer bought more than given quantity </h2>
 <form action="morethangiven.php" method="post">
 <!-- Give the quantity number that would like to check -->
-<h3>Quantity Check: </h3><input type="number" name="quantitycheck"><br><br><br>
-  <input type="submit" value="Click here to check quantity">
+<h3>Quantity Check: </h3>
+	<input type="number" name="quantitycheck"><br><br><br>
+	<input type="submit" value="Click here to check quantity">
   <hr>
 </form>
 
@@ -149,12 +152,12 @@ Purchase Quantity: <input type="text" name="quantity"><br>
 <hr>
 <p>
 <h2> Never Purchased </h2>
-
 <?php
       include "neverpurchased.php";
 ?>
 <br><br>
 <p>
+<hr>
 <hr>
 <p>
 
@@ -163,13 +166,13 @@ Purchase Quantity: <input type="text" name="quantity"><br>
 <form action="totalsales.php" method="post">
 <!-- Select products that user would like to see sales information -->
 <h3>For which product:</h3> <br>
-<select name="totalsalesproduct"><br>
-<option value="1"> Select Here </option>
+	<select name="totalsalesproduct"><br>
+	<option value="1"> Select Here </option>
 <?php
    include 'getproduct.php';
 ?>
 
-<input type="submit" value="Click here to get total sales">
+	<input type="submit" value="Click here to get total sales">
 </form>
 
 <?php
