@@ -4,6 +4,7 @@
 <head>
 <meta charset="utf-8">
 <title>Company Inventory</title>
+<link rel="stylesheet" type="text/css" href="a3.css">
 </head>
 <body>
 <script src = "a3.js"></script>
