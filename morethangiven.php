@@ -19,6 +19,7 @@
   		echo $row["description"];
   		echo " ";
   		echo $row["purchasequantity"];
+  		echo $query;
   		echo '</li>';
   		
      }
