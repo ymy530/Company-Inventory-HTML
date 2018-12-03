@@ -10,7 +10,7 @@
    //create radio buttom of customers for user, display all the customer information
         echo '<input type="radio" name="customer" value="';
         echo $row["customerid"];
-        echo '">' . $row["customerid"]. "  Customer Name: " .$row["firstname"] . " " . $row["lastname"] . "  City: "  .$row["city"]. "  Phone: " .$row["phone"]. " Agent:" .$row["agentid"].  "<br>";
+        echo '">' . $row["customerid"]. "  &nbsp "  "  Customer Name: " .$row["firstname"] . " " . $row["lastname"] . "  &nbsp " "  City: "  .$row["city"]. "  &nbsp " "Phone: " .$row["phone"]. "  &nbsp " " Agent:" .$row["agent"].  "<br>";
    }
    mysqli_free_result($result);
 ?>
