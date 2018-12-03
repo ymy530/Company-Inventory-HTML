@@ -10,7 +10,7 @@ INNER JOIN products ON products.productid = purchased.productid AND purchasequan
      }
     while ($row=mysqli_fetch_assoc($result)) {
         echo '<li>';//return the prouct list that purchased
-       echo $row["firstname"];
+        echo $row["firstname"];
   		echo $row["lastname"];
   		echo $row["purchasequantity"];
   		echo  $whichQuantity;

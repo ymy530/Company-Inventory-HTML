@@ -132,7 +132,7 @@ For which customer: <br>
 <h2> Customer bought more than given quantity </h2>
 <form action="morethangiven.php" method="post">
 
-Quantity Check: <input type="text" name="quantitycheck"><br>
+Quantity Check: <input type="number" name="quantitycheck"><br>
        <br><br>
   <input type="submit" value="Click here to check quantity">
   <hr>
