@@ -12,14 +12,14 @@
      }
     while ($row=mysqli_fetch_assoc($result)) {
         echo '<li>';//return the purchased list that customer name, product description and their purchase quantity
+        echo " Name: ";
         echo $row["firstname"];
         echo " ";
   		echo $row["lastname"];
-  		echo " ";
+  		echo "&nbsp Product: ";
   		echo $row["description"];
-  		echo " ";
+  		echo "&nbsp Purchase Quantity: ";
   		echo $row["purchasequantity"];
-  		echo $query;
   		echo '</li>';
   		
      }
