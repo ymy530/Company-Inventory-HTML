@@ -13,7 +13,7 @@
   echo "<ul>"; 
   while($row = mysqli_fetch_assoc($result)){
   //print the products table row by row
-    echo "<li>" .$row["productid"]. "   " .$row["description"]. "   " .$row["cost"]. "      " .$row["quantity"]. "</li>";
+  echo "<li>" .$row["productid"]. "  &nbsp Product:  " .$row["description"]. "  &nbsp Cost:  " .$row["cost"]. "  &nbsp Quantity     " .$row["quantity"]. "</li>";
   }
   echo "</ul>";   
   mysqli_free_result($result);
@@ -26,7 +26,7 @@
   echo "<ul>"; // return unorder list
   while($row = mysqli_fetch_assoc($result)){
   //print the products table row by row
-    echo "<li>" .$row["productid"]. "   " .$row["description"]. "   " .$row["cost"]. "      " .$row["quantity"]. "</li>";
+  echo "<li>" .$row["productid"]. "  &nbsp Product:  " .$row["description"]. "  &nbsp Cost:  " .$row["cost"]. "  &nbsp Quantity     " .$row["quantity"]. "</li>";
   }
   echo "</ul>";   
   mysqli_free_result($result);
@@ -38,7 +38,7 @@
   echo "<ul>"; 
   while($row = mysqli_fetch_assoc($result)){
    //print the products table row by row
-  echo "<li>" .$row["productid"]. "   " .$row["description"]. "   " .$row["cost"]. "      " .$row["quantity"]. "</li>";  }
+  echo "<li>" .$row["productid"]. "  &nbsp Product:  " .$row["description"]. "  &nbsp Cost:  " .$row["cost"]. "  &nbsp Quantity     " .$row["quantity"]. "</li>";
   echo "</ul>";  
   mysqli_free_result($result);
   } else{
@@ -49,7 +49,7 @@
   echo "<ul>"; 
   while($row = mysqli_fetch_assoc($result)){
    //print the products table row by row
-  echo "<li>" .$row["productid"]. "   " .$row["description"]. "   " .$row["cost"]. "      " .$row["quantity"]. "</li>";  }
+  echo "<li>" .$row["productid"]. "  &nbsp Product:  " .$row["description"]. "  &nbsp Cost:  " .$row["cost"]. "  &nbsp Quantity     " .$row["quantity"]. "</li>";
   echo "</ul>";   
   mysqli_free_result($result);
   } 
