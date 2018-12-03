@@ -134,12 +134,6 @@ For which customer: <br>
 
 Quantity Check: <input type="number" name="quantitycheck"><br>
        <br><br>
-        <?php
-    if (isset($_POST['quantitycheck'])) { 
-      include "connecttodb.php"; 
-      include "morethangiven.php";
-    } //end of if
-    ?>
   <input type="submit" value="Click here to check quantity">
   <hr>
 </form>

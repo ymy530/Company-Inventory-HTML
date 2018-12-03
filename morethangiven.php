@@ -1,4 +1,7 @@
 <?php
+	if (isset($_POST['quantitycheck'])) { 
+      include "connecttodb.php"; 
+    } //end of if
 	//include 'connectdb.php';
    $checkquantity= $_POST["quantitycheck"];//fetch the value that user selected
    $query = 'SELECT customers.lastname as lastname, customers.firstname as firstname,purchasequantity, description FROM customers, products, purchased WHERE
