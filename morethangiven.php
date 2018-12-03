@@ -1,5 +1,5 @@
 <?php
-	include 'connectdb.php';
+	//include 'connectdb.php';
    $checkquantity= $_POST["quantitycheck"];//fetch the value that user selected
    $query = 'SELECT customers.lastname as lastname, customers.firstname as firstname,purchasequantity, description FROM customers, products, purchased WHERE
         customers.customerid = purchased.customerid AND products.productid = purchased.productid AND purchasequantity> "' .$checkquantity. '"';
@@ -16,7 +16,9 @@
   		echo $row["purchasequantity"];
   		echo " ";
   		echo  $checkquantity;
+  		
      }
      mysqli_free_result($result);
+     
 ?>
 
