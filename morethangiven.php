@@ -1,8 +1,8 @@
 <?php
 	include 'connectdb.php';
-   $whichQuantity= $_POST["quantitycheck"];//fetch the value that user selected
+   $whichQuantity1= $_POST["quantitycheck"];//fetch the value that user selected
    $query = 'SELECT customers.lastname as lastname, customers.firstname as firstname,purchasequantity, description FROM customers, products, purchased WHERE
-        customers.customerid = purchased.customerid AND products.productid = purchased.productid AND purchasequantity> "' .$whichQuantity. '"';
+        customers.customerid = purchased.customerid AND products.productid = purchased.productid AND purchasequantity> "' .$whichQuantity1. '"';
    $result=mysqli_query($connection,$query);
     if (!$result) {
          die("database query2 failed.");
@@ -12,7 +12,7 @@
         echo $row["firstname"];
   		echo $row["lastname"];
   		echo $row["purchasequantity"];
-  		echo  $whichQuantity;
+  		echo  $whichQuantity1;
      }
      mysqli_free_result($result);
 ?>
