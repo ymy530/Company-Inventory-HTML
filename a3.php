@@ -14,6 +14,7 @@
 include 'connectdb.php';
 ?>
 <h1>Welcome to Inventory</h1>
+
 <!-- Check what products that customer purchased -->
 <h2>Our Customers</h2>
 <!-- Get customer list in radio buttom -->
@@ -26,6 +27,7 @@ include 'connectdb.php';
 </form>
 <hr>
 <hr>
+
 <!-- View all the products information by different orders(price and description) -->
 <h2> View All The Products  </h2>
 <!-- After user click on dropdown menu, the product information show on the same page -->
@@ -46,16 +48,15 @@ include 'connectdb.php';
       include "getorders.php";
     } 
 ?>
+<p>
+<hr>
+<p>
 
-<p>
-<hr>
-<hr>
-<p>
 <!-- Insert new purchase information with existing customer and prosucts, just increase the quantity number -->
 <h2> Insert New Purchase </h2>
 <form action="addnewpurchase.php" method="post">
 <!-- Select products that customer purchased -->
-<h3>Products:<h3> <br>
+<h3>Products:</h3> <br>
 <?php
    include 'getdescription.php';
 ?>
@@ -66,13 +67,14 @@ include 'getdata.php';
 ?>
 <!-- Insert purchase quantity -->
 Purchase Quantity: <input type="text" name="quantity"><br>
-<input type="submit" value="Add New Purchase">
+				   <input type="submit" value="Add New Purchase">
 </form>
 
 <p>
 <hr>
 <hr>
 <p>
+
 <h2> Add A New Customer </h2>
 <form action="addcustomer.php" method="post" >
 <!-- Enter new customer information -->
