@@ -8,6 +8,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   echo "<option value='";
   echo $row["customerid"] ."'>";
   echo $row["firstname"];
+  echo " ";
   echo $row["lastname"];
   echo "</option>";
 }

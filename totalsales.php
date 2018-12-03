@@ -10,7 +10,9 @@
     while ($row=mysqli_fetch_assoc($result)) {
         echo '<li>';//return the prouct list that purchased
         echo $row["description"];
+        echo " ";
         echo $row["totalsale"];
+        echo " ";
         echo $row["money"];
 } 
 ?>

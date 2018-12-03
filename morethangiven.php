@@ -10,8 +10,11 @@
     while ($row=mysqli_fetch_assoc($result)) {
         echo '<li>';//return the prouct list that purchased
         echo $row["firstname"];
+        echo " ";
   		echo $row["lastname"];
+  		echo " ";
   		echo $row["purchasequantity"];
+  		echo " ";
   		echo  $checkquantity;
      }
      mysqli_free_result($result);
