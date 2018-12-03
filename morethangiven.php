@@ -1,6 +1,6 @@
 <?php
 	if (isset($_POST['quantitycheck'])) { 
-      include "connecttodb.php"; 
+      include "connectdb.php"; 
     } //end of if
 	//include 'connectdb.php';
    $checkquantity= $_POST["quantitycheck"];//fetch the value that user selected
