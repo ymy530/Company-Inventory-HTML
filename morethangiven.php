@@ -5,7 +5,7 @@
    $checkquantity= $_POST["quantitycheck"];//fetch the value that user entered
    // return information about everything that select purchased
    $query = 'SELECT customers.lastname as lastname, customers.firstname as firstname,purchasequantity, description FROM customers, products, purchased WHERE
-        customers.customerid = purchased.customerid AND products.productid = purchased.productid AND purchasequantity> "' .$checkquantity. '"';
+        customers.customerid = purchased.customerid AND products.productid = purchased.productid AND purchasequantity> ' .$checkquantity. '';
    $result=mysqli_query($connection,$query);
     if (!$result) {
          die("database query failed.");
